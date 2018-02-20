@@ -1,5 +1,5 @@
 export default function profile(state = { user: { name: 'nope' }}, action) {
-  switch(action.type) {
+  switch (action.type) {
     default: 
         break;
   }

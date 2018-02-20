@@ -18,9 +18,13 @@ export default class Profile extends Component {
   moveViewForward() {
     const nextTabIdx = this.state.activeTab + 1;
 
-    this.setState({
-      activeTab: nextTabIdx
-    });
+    if (nextTabIdx < 2) {
+      this.setState({
+        activeTab: nextTabIdx
+      });
+    } else {
+      this.props.navigation.navigate('Home');
+    }
   }
 
   moveViewBack() {
